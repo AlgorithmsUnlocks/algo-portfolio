@@ -14,11 +14,12 @@ class CreateGlobalSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('socials')->insert([
+        DB::table('language')->insert([
             [
-                'twitterLink' => 'https://twitter.com',
-                'githubLink' => 'https://twitter.com',
-                'linkedinLink' => 'https://twitter.com',
+                'name' => 'English',
+            ],
+            [
+                'name' => 'Bangla',
             ],
         ]);
     }
