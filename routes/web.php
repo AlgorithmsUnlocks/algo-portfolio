@@ -18,27 +18,28 @@ use App\Http\Controllers\ContactController;
 */
 
 /*
- * Page Routes define for algo-portolfio
- */
+* Page Routes define for algo-portolfio
+*/
+
 Route::get('/',[HomeController::class,'page']);
 Route::get('/contact',[ContactController::class,'page']);
-Route::get('/project',[ProjectController::class,'page']);
+Route::get('/projects',[ProjectController::class,'page']);
 Route::get('/resume',[ResumeController::class,'page']);
 
 /*
- * Ajax call Routes for algo-portfolio
- */
+* Ajax call Routes for algo-portfolio
+*/
 
-Route::get('/heroData',[HomeController::class,'heroData']);
-Route::get('/aboutData',[HomeController::class,'aboutData']);
-Route::get('/socialData',[HomeController::class,'socialData']);
+Route::get('/heroData',[HomeController::class,'heroData']); // done
+Route::get('/aboutData',[HomeController::class,'aboutData']); // done
+Route::get('/socialData',[HomeController::class,'socialData']); // done
 
-Route::get('/projectData',[ProjectController::class,'projectData']);
+Route::get('/projectData',[ProjectController::class,'projectData']); // done
 
-Route::get('/resumeLink',[ResumeController::class,'resumeLink']);
-Route::get('/experienceData',[ResumeController::class,'experienceData']);
-Route::get('/educationData',[ResumeController::class,'educationData']);
+Route::get('/resumeLink',[ResumeController::class,'resumeLink']); // done
+Route::get('/experienceData',[ResumeController::class,'experienceData']); // done
+Route::get('/educationData',[ResumeController::class,'educationData']); // done
 Route::get('/skillData',[ResumeController::class,'skillData']);
-Route::get('/languageData',[ResumeController::class,'languageData']);
+Route::get('/languageData',[ResumeController::class,'languageData']); // done
 
-Route::post('/contactRequest',[ContactController::class,'contactRequest']);
+Route::post('/contactRequest',[ContactController::class,'contactRequest']); //done

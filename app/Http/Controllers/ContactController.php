@@ -8,10 +8,11 @@ use Illuminate\Support\Facades\DB;
 class ContactController extends Controller
 {
     function page(Request $request){
-        $seo = DB::table('seoproperties')->where('pageName','=','Home')->first();
+        $seo = DB::table('seoproperties')->where('pageName','=','contact')->first();
         return view('pages.contact',['seo'=>$seo]);
     }
     function contactRequest(Request $request){
+//        sleep(10); // wait 10second after complete the request
         return DB::table('contacts')->insert($request->input());
     }
 }
