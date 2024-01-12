@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\DB;
 class ResumeController extends Controller
 {
    function page(Request $request){
-       $seo = DB::table('seoproperties')->where('pageName','=','Home')->first();
+       $seo = DB::table('seoproperties')->where('pageName','=','resume')->first();
        return view('pages.resume',['seo'=>$seo]);
    }
     function resumeLink(Request $request){

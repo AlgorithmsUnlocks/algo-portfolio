@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\DB;
 class ProjectController extends Controller
 {
    function page(Request $request){
-       $seo = DB::table('seoproperties')->where('pageName','=','Home')->first();
+       $seo = DB::table('seoproperties')->where('pageName','=','projects')->first();
        return view('pages.project',['seo'=>$seo]);
    }
     function projectData(Request $request){
